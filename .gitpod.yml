@@ -1,0 +1,13 @@
+image: maven:3.8.6-eclipse-temurin-17
+
+tasks:
+  - init: mvn clean install
+    command: mvn test
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
